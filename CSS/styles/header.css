@@ -1,0 +1,107 @@
+header{
+    /*
+    Grid sirve para crear un sistema de filas o columnas
+    */
+    display: grid;
+    /**
+    sirve para indicar cuantas columnas quiero y su tamaño
+    */
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    background: linear-gradient(270deg, #000000, #00bfff);
+    background-size: 400% 400%;
+
+    -webkit-animation: fondo 15s ease infinite;
+    -moz-animation: fondo 15s ease infinite;
+    animation: fondo 15s ease infinite; 
+
+}
+
+header > div > img{
+    width: 100%;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+}
+
+.izquierda > h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.izquierda > h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.izquierda > div {
+    display: flex;
+    gap: 0;
+}
+
+.izquierda > div > input{
+    border-radius: 25px 0 0 25px;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.izquierda > div > button {
+    border-radius: 0 25px 25px 0;
+    background: white;
+    color: deepskyblue;
+    font-weight: 600;
+    border: none;
+    border-left: 3px solid #00bfff;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.derecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/**Pseudo elementos
+estos se utlizan para darle estilos a partes
+especificas de un elemento
+Lista 
+::after (despues del contenido)
+::before (antes del contenido)
+::first-letter (primera letra)
+::first-line (primera linea)
+::selection (texto seleccionado)
+::placeholder (texto de un  input)
+*/
+/*
+input::placeholder{
+    color:#000000;
+}
+*/
+
+p::after{
+    content: "🖐️";
+    font-size: 24px;
+}
+
+@-webkit-keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
